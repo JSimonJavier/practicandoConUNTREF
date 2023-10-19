@@ -1,0 +1,89 @@
+body{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-color: #333;
+  color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+nav{
+  background-color: #444;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white
+}
+
+main{
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  height: 50vh;
+}
+
+footer{
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Tablets */
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+  header, nav, main, footer{
+    padding: 10px;
+  }
+}
+
+/* celular */
+@media screen and (max-width:767px){
+  header, nav, main, footer {
+    padding: 5px
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li{
+    padding: 2px;
+    border-bottom: 2px solid #fff
+  }
+
+}
+
+/* estilos para orientacion vertical */
+@media screen and (max-width: 767px) and (orientation:portrait){
+  header, nav, main, footer{
+    background-color: #666;
+    color: white
+  }
+}
+
+/* estilos para orientacion horizontal */
+@media screen and (max-width: 767px) and (orientation:landscape){
+  header, nav, main, footer{
+    background-color: #666;
+    color: white
+  }
+}
