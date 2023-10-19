@@ -1,0 +1,51 @@
+/*
+@media not|only mediatype and (expressions) {
+  body{
+    color: red
+  }
+}
+
+  => @media -> indica que estamos creadn una media query donde van a estar los estilos
+  => not|only -> palabras claves opcionales que se usan para ajustar el compartamiento de la media query
+    not: signica que la media se aplicara si la expresion no se cumple
+    only: es una forma de garantizar que los estilos se apliquen solo en navegadores compatibles con media queries
+  => mediatype: se referie al tipo de media al que se aplicaran los estilos
+    -> screen (pantalla)
+    -> print (solo para impresoras)
+    -> all (en todos los tipos de pantallas)
+    -> speech (define una medida y selectores para apps de lectura de pantalla)
+  => expressions -> aquí es donde se especifican las expresiones de consulta de medios,que son las condiciones que determinan cuando se aplicara los estilos
+    -min-width: definir el valor de la medida minima que tendra la pantalla
+    -max-width: definir el valor de la medida maximo que tendra la pantalla
+*/
+
+body{
+  background-color: green;
+  margin-top: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+@media screen and (max-width: 1200px){
+  body{
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 768px){
+  body{
+    background-color: blue;
+  }
+}
+
+@media screen and (min-width:300px) and (max-width: 600px) and (orientation: portrait){
+  body{
+    background-color: orangered;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape){
+  body{
+    background-color: yellow;
+  }
+}
